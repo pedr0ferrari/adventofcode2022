@@ -36,8 +36,8 @@ const partTwo = () => {
   const top3 = sortedCumulative.slice(-3);
   console.log("TOP_3", top3);
 
-  const sumtop3 = top3.reduce((x, y) => {
-    return x + y;
+  const sumtop3 = top3.reduce((acc, curr) => {
+    return acc + curr;
   });
   // o valor de X funciona como um acumulador
   // o valor de Y seria cada valor do array
