@@ -5,11 +5,6 @@ const partOne = () => {
 
   const [crates, moves] = inputData.split("\n\n");
 
-  // console.log("crates:");
-  // console.log(crates);
-
-  // console.log("moves:");
-  // console.log(moves);
   const moveLines = moves.trim().split("\n");
   console.log("moveLines", moveLines);
 
