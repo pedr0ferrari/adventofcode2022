@@ -1,3 +1,3 @@
-import partOne from "./day5/partOne";
+import partTwo from "./day5/partTwo";
 
-partOne();
+partTwo();
