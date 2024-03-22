@@ -3,13 +3,20 @@
 // o marker é o quarto caractere da sequencia de diferentes
 // o marker + 3 anteriores sao diferentes
 
+//colocar o input em um array, cada letra em uma pos
+// ler os 4 caracteres primeiros do array (0-3),
+// verificar a existencia de letras repetidas,
+// se existem repetidas, avançar uma casa (1-4) e verificar novamente
+// se não existem repetidas, marcar o ultimo char do conjunto de 4
+// como o marker
+
 import fs from "fs";
 
 const partTwo = () => {
   const inputData: string = fs.readFileSync("day6/file.txt", "utf8");
 
   const getMarker = (inputData: string) => {
-    const inputArray = inputData.split("");
+    const inputArray: string[] = inputData.split("");
     const hasDuplicates = (arr: string[]) => arr.length !== new Set(arr).size;
 
     let start: number = 0;
@@ -30,13 +37,6 @@ const partTwo = () => {
   };
 
   getMarker(inputData);
-
-  //colocar o input em um array, cada letra em uma pos
-  // ler os 4 caracteres primeiros do array (0-3),
-  // verificar a existencia de letras repetidas,
-  // se existem repetidas, avançar uma casa (1-4) e verificar novamente
-  // se não existem repetidas, marcar o ultimo char do conjunto de 4
-  // como o marker
 };
 
 export default partTwo;
